@@ -7,7 +7,11 @@
 	<link rel="stylesheet" href="css/materialize.min.css">
 	 <style>
 	.nav-wrapper {
-	  background: linear-gradient(to right, #A22EEE, #083BE2);
+	background: linear-gradient(to right, #A22EEE, #083BE2);
+	}
+	body {
+	font-family: 'Montserrat';
+	font-weight:400;
 	}
 	</style>
 </head>
@@ -27,5 +31,20 @@
 
 	<script src="js/materialize.min.js"></script>
 	<script src="js/script.js"></script>
+	<script>
+	if ("serviceWorker" in navigator) {
+		window.addEventListener("load", function() {
+			navigator.serviceWorker.register("/dedikahfi.github.io/serviceworker.js")
+			.then(function() {
+				console.log("Pendaftaran ServiceWorker berhasil.");
+			})
+			.catch(function() {
+				console.log("Pendaftaran ServiceWorker gagal.");
+			});
+		})
+	} else {
+		console.log("Browser belum mendukung ServiceWorker.");
+	}
+	</script>
 </body>
 </html>

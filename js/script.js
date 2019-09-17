@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-	// Menampilkan drawer layaknya aplikasi native, dan memanggil nav dari nav.html
+	// Menampilkan drawer layaknya aplikasi native, dan memanggil sidebar
 	var elems = document.querySelector(".sidenav");
 	M.Sidenav.init(elems);
 	loadNav();
@@ -12,6 +12,20 @@ document.addEventListener("DOMContentLoaded", function() {
 					// Muat daftar menu pada sidenav dan topnav
 					document.querySelectorAll(".topnav, .sidenav").forEach(function(elm) {
 						elm.innerHTML = xhttp.responseText;
+					});
+
+					// Listener nav
+					document.querySelectorAll(".topnav a, .sidenav a").forEach(function(elm) {
+						// Call listener every nav
+						elm.addEventListener("click", function(event) {
+							// Menutup drawer
+							var sidenav = document.querySelector(".sidenav");
+							M.Sidenav.getInstance(sidenav).close();
+
+							//Call function loadPage()
+							var pageCall = event.target.getAttribute("href").substr(1);
+							loadPage(pageCall);
+						});
 					});
 				} else {
 					return;
