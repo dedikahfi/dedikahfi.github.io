@@ -5,7 +5,6 @@
   "theme_color": "#083be2",
   "background_color": "#083be2",
   "display": "standalone",
-  "Scope": "/dedikahfi.github.io/index.html",
   "start_url": "/dedikahfi.github.io/index.html",
   "icons": [
     {
