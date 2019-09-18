@@ -1,18 +1,18 @@
-const CACHE_NAME = "pwa-dedikahfi-v1.1.1";
+const CACHE_NAME = "pwa-dedikahfi-v1.1.2";
 var urlsToCache = [
 	"/",
-	"css/materialize.min.css",
-	"js/materialize.min.js",
-	"js/script.js",
-	"pages/education.html",
-	"pages/experience.html",
-	"pages/skills.html",
-	"pages/home.html",
-	"index.html",
-	"nav.html",
-	"assets/work.png",
-	"assets/image-home.png",
-	"assets/ctb.jpg"
+	"/nav.html",
+	"/index.html",
+	"/pages/education.html",
+	"/pages/experience.html",
+	"/pages/skills.html",
+	"/pages/home.html",
+	"/css/materialize.min.css",
+	"/js/materialize.min.js",
+	"/js/script.js",
+	"/assets/work.png",
+	"/assets/image-home.png",
+	"/assets/ctb.jpg"
 ];
 
 // Add cache to serviceworker
