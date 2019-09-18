@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="./css/materialize.min.css"><!doctype html>
     <link rel="canonical" href="https://dedikahfi.github.io"/>
 	<link rel="apple-touch-icon" href="assets/icons/icon-96x96.png">
-	<link rel="manifest" href="/dedikahfi.github.io/manifest.json">
+	<link rel="manifest" href="manifest.json">
 	 <style>
 	.nav-wrapper {
 	background: linear-gradient(to right, #A22EEE, #083BE2);
@@ -41,7 +41,7 @@
 	<script>
 	if ("serviceWorker" in navigator) {
 		window.addEventListener("load", function() {
-			navigator.serviceWorker.register("/dedikahfi.github.io/serviceworker.js")
+			navigator.serviceWorker.register("serviceworker.js")
 			.then(function() {
 				console.log("Pendaftaran ServiceWorker berhasil.");
 			})
